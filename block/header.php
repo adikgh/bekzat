@@ -7,5 +7,5 @@
 </head>
 <body>
 
-	<? include "preloader.php"; ?>
+	<? // include "preloader.php"; ?>
 	<? include "menu.php"; ?>

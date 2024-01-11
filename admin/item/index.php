@@ -10,7 +10,7 @@
 		$cours = db::query("select * from sanatorium where id = '$cours_id'");
 		if (mysqli_num_rows($cours)) {
 			$cours_d = mysqli_fetch_assoc($cours);			
-			if ($cours_d['info']) $cours_d = array_merge($cours_d, fun::cours_info($cours_d['id']));
+			if (@$cours_d['info']) $cours_d = array_merge($cours_d, fun::cours_info($cours_d['id']));
 		} else header('location: /admin/catalog/');
 	} else header('location: /admin/catalog/');
 

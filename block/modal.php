@@ -1,9 +1,16 @@
 	<!--  -->
-	<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>?text=Я%20заинтересован%20по%20поводу%20санаторий%20...">
-		<div type="button" class="callback-btw">
-		   <i class="fab fa-whatsapp"></i>
-		</div>
-	</a>
+	<? // if ($site_set['clc_ph']): ?>
+		<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>?text=Я%20заинтересован%20по%20поводу%20санаторий%20...">
+			<div type="button" class="callback-btw">
+			<i class="fab fa-whatsapp"></i>
+			</div>
+		</a>
+		<a target="_blank" href="tel:<?=$site['phone']?>">
+			<div type="button" class="callback-bt">
+			<i class="far fa-phone"></i>
+			</div>
+		</a>
+	<? // endif ?>
 
 	<!-- block form -->
 	<div class="pop_bl fr">

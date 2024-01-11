@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title><?=$menu['title']?> | <?=$site['name']?></title>
-<meta name="description" content="<?=$menu['disc']?> <?=$site['phone_view']?>">
-<meta name="keywords" content="<?=$menu['keyw']?>">
-<meta name="theme-color" content="<?=$site['color']?>">
+<title><?=$menu['title_'.$lang]?> | <?=$site['name']?></title>
+<meta name="description" content="<?=@$menu['disc_'.$lang]?> <?=$site['phone_view']?>">
+<meta name="keywords" content="<?=@$menu['keyw_'.$lang]?>">
+<meta name="theme-color" content="<?=@$site['color']?>">
 
 <!-- icon -->
-<link rel="icon" href="/assets/img/logo/icon_main.png" type="image/x-icon">
-<link rel="shortcut icon" type="image/icon" href="/assets/img/logo/icon_main.png">
+<link rel="icon" href="/assets/img/logo/logo.png" type="image/x-icon">
+<link rel="shortcut icon" type="image/icon" href="/assets/img/logo/logo.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://<?=$site['site']?>.kz" />
 <meta property="og:site_name" content="<?=$site['name']?>" />
-<meta property="og:title" content="<?=$menu['title']?> | <?=$site['name']?>" />
-<meta property="og:description" content="<?=$menu['disc']?> <?=$site['phone_view']?>" />
-<meta property="og:image" content="/assets/img/logo/logo.jpg" />
+<meta property="og:title" content="<?=@$menu['title_'.$lang]?> | <?=$site['name']?>" />
+<meta property="og:description" content="<?=@$menu['disc_'.$lang]?> <?=$site['phone_view']?>" />
+<meta property="og:image" content="/assets/img/logo/logo.png" />
 
 <!-- apple -->
 <meta name="application-name" lang="<?=$lang?>" content="<?=$site['site']?>">
@@ -28,8 +28,8 @@
 <!-- ms -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="cleartype" content="on">
-<meta name="msapplication-tooltip" content="<?=$menu['title']?> | <?=$site['name']?>">
-<meta name="msapplication-TileColor" content="<?=$site['color']?>">
+<meta name="msapplication-tooltip" content="<?=@$menu['title_'.$lang]?> | <?=$site['name']?>">
+<meta name="msapplication-TileColor" content="<?=@$site['color']?>">
 <meta name="msapplication-starturl" content="https://<?=$site['site']?>">
 
 <!-- css -->
@@ -37,8 +37,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Oswald:wght@500;600;700&display=swap" />
 <link rel="stylesheet" href="/assets/pl/fontawesome/css/all.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-<? if ($site_set['swiper'] != 'false'): ?> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.css" /> <? endif ?>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> -->
+<? if (@$site_set['swiper'] != 'false'): ?> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.css" /> <? endif ?>
 
 <!-- main css -->
 <link rel="stylesheet" type="text/css" href="/assets/css/norm.css?v=<?=$ver?>" />
@@ -55,10 +55,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="/assets/js/func.js?v=<?=$ver?>"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
-<? if ($site_set['swiper'] != 'false'): ?> <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.js"></script> <? endif ?>
+<? if (@$site_set['swiper'] != 'false'): ?> <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.js"></script> <? endif ?>
 
 	
 <? if ($site['metrika'] != null): ?>

@@ -6,10 +6,10 @@
 	100%{box-shadow:0 8px 10px var(--bl2),0 0 0 30px var(--trb),0 0 0 40px var(--trb)}
 }
 @keyframes hoverWave {
-   0%{box-shadow:0 8px 10px var(--cl3),0 0 0 0 var(--cl2),0 0 0 0 var(--cl2)}
-	40%{box-shadow:0 8px 10px var(--cl3),0 0 0 15px var(--cl2),0 0 0 0 var(--cl2)}
-	80%{box-shadow:0 8px 10px var(--cl3),0 0 0 30px var(--trb),0 0 0 26.7px var(--cl1)}
-	100%{box-shadow:0 8px 10px var(--cl3),0 0 0 30px var(--trb),0 0 0 40px var(--trb)}
+   0%{box-shadow:0 8px 10px var(--cm3),0 0 0 0 var(--cm2),0 0 0 0 var(--cm2)}
+	40%{box-shadow:0 8px 10px var(--cm3),0 0 0 15px var(--cm2),0 0 0 0 var(--cm2)}
+	80%{box-shadow:0 8px 10px var(--cm3),0 0 0 30px var(--trb),0 0 0 26.7px var(--cm1)}
+	100%{box-shadow:0 8px 10px var(--cm3),0 0 0 30px var(--trb),0 0 0 40px var(--trb)}
 }
 @keyframes shake {
 	0%{transform:rotateZ(0deg)}

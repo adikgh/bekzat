@@ -115,7 +115,7 @@ $(document).ready(function() {
 
 
 	// 
-	AOS.init({duration:500,once:true});
+	// AOS.init({duration:500,once:true});
 
 
 	// 
@@ -272,6 +272,7 @@ $(document).ready(function() {
 						phone.val('')
 						phone.attr('data-pr', 0)
 					} else mess('Пожалуйста, перезагрузите сайт <br>и попробуйте еще раз')
+					console.log(data);
 				},
 			})
 		}

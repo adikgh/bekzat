@@ -4,8 +4,8 @@
 	// https://api.telegram.org/bot1082028620:AAGRXcmhEtOlK3Z29Fa7Vq6JfIK1Uwdw-P4/getUpdates
 		
 	$token = "1082028620:AAGRXcmhEtOlK3Z29Fa7Vq6JfIK1Uwdw-P4";
-	$chat_id = "-1001385698308";
-
+	$chat_id = "-1002019153813";
+	$txt = '';
 
 	// 
 	if(isset($_GET['mess'])) {
@@ -16,7 +16,7 @@
 		// $phone = substr_replace($phone, '8', 0, 1);
 
 		$arr = array(
-			'Cайт: '	=> 'Басты',
+			// 'Cайт: '	=> 'Басты',
 			'Типі: ' => $sms,
 			'Аты-жөні: ' => $name,
 			'Телефон: ' => $phone
@@ -36,7 +36,7 @@
 		$phone = strip_tags($_POST['phone']);
 
 		$arr = array(
-			'Cайт: '	=> 'Басты',
+			// 'Cайт: '	=> 'Басты',
 			'Типі: '	=> $sms,
 			'Телефон: ' => $phone
 		);
@@ -59,7 +59,7 @@
 		$phone = strip_tags($_POST['phone']);
 
 		$arr = array(
-			'Cайт: '	=> 'Басты',
+			// 'Cайт: '	=> 'Басты',
 			'Типі: ' => 'Тест №1',
 			'Адам саны: ' => $tv1,
 			'Дем алу күні: ' => $tv2,
@@ -103,3 +103,4 @@
 
 		exit();
 	}
+	

@@ -1,17 +1,6 @@
 <!--  -->
 <div class="bl_mess"><div class="bl_mess_sam"></div></div>
 
-
-<!-- phone -->
-<? if ($site_set['cl_wh'] == true): ?>
-	<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>">
-		<div type="button" class="callback-bt">
-		   <i class="fab fa-whatsapp"></i>
-		</div>
-	</a>
-<? endif ?>
-
-
 <!-- user edit -->
 <? if ($user_id): ?>
 	<div class="pop_bl pop_bl2 user_edit_block">
@@ -144,4 +133,3 @@
 		</div>
 	</div>
 <? endif ?>
-

@@ -1,40 +1,33 @@
 <? if ($site_set['header']): ?>
-	<div class="header <?=($site_set['header_wh'] == 'true'?'header_wh':'')?> <?=($site_set['header2'] == 'true'?'header2':'')?>">
+	<div class="header <?=(@$site_set['header_wh'] == 'true'?'header_wh':'')?> <?=(@$site_set['header2'] == 'true'?'header2':'')?>">
 		<div class="bl_c">
 			<div class="header_c">
 				<div class="header_l">
 					<a class="logo" href="/">
-						<? if ($site_set['header_wh'] == 'true'): ?>
-							<div class="logo_i lazy_logo" data-src="/assets/img/logo/icon_white.png"></div>
-						<? else: ?>
-							<div class="logo_i lazy_logo" data-src="/assets/img/logo/icon_main.png"></div>
-						<? endif ?>
+						<!-- <div class="logo_i lazy_logo" data-src="/assets/img/logo/icon_main.png"></div> -->
 						<span><?=$site['name']?></span>
 					</a>
 					<div class="menu_wq">
 						<a class="menu_wqi" href="/catalog/"><?=t::w('Sanatoriums')?></a>
-						<a class="menu_wqi" href="/about/"><?=t::w('About')?></a>
-						<a class="menu_wqi" href="/about/contact.php"><?=t::w('Contacts')?></a>
+						<a class="menu_wqi" href="/#review">Отзывы</a>
+						<!-- <a class="menu_wqi" href="/about/"><?=t::w('About')?></a> -->
+						<a class="menu_wqi" href="/#contact"><?=t::w('Contacts')?></a>
 						<!-- <a class="menu_wqi" href="/"></a> -->
-						<div class="lang">
+						<!-- <div class="lang">
 							<? if ($lang == 'kz'): ?> <a class="menu_wqi" href="<?=$url?>?lang=ru">Русский</a>
 							<? else: ?> <a class="menu_wqi" href="<?=$url?>?lang=kz">Қазақша</a> <? endif ?>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
 				<div class="header_r">
-					<!-- <div class="lang">
-						<?=($lang=='kz'?'<div class="lang_i"><span>Қазақша</span><span>ҚАЗ</span></div>':'<a href="'.$url.'?lang=kz" class="lang_ia"><span>Қазақша</span><span>ҚАЗ</span></a>')?>
-						<?=($lang=='ru'?'<div class="lang_i"><span>Русский</span><span>РУС</span></div>':'<a href="'.$url.'?lang=ru" class="lang_ia"><span>Русский</span><span>РУС</span></a>')?>
-					</div> -->
 					<a class="phone_nm" href="tel:<?=$site['phone']?>"><?=$site['phone_view']?></a>
 
 					<div class="menu_o">
 						<div class="menu_oz"></div>
 						<div class="menu_os">					
 							<div class="menu_ot"><?=t::w('Menu')?></div>
-							<div class="menu_oc"><span></span><span></span><span></span></div>
+							<div class="menu-icon"><div><span></span><span></span></div></div>
 						</div>
 						<div class="menu_c">
 							<div class="menu_cn">
@@ -45,10 +38,10 @@
 										<span><?=t::w('Sanatoriums')?></span>
 									</a>
 									<div class="menu_ci menu_cip menu_cipc menu_clc_gprog">
-										<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/logo/icon_black.png"></div></div>
+										<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/logo/logo.png"></div></div>
 										<span><?=t::w('About')?></span>
 									</div>
-									<div class="menu_ci menu_cip menu_cipc menu_clc_lang">
+									<!-- <div class="menu_ci menu_cip menu_cipc menu_clc_lang">
 										<? if ($lang == 'kz'): ?>
 											<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/icons/flag-kazakhstan_1f1f0-1f1ff.png"></div></div>
 											<span><?=t::w('Language')?>: <b>Қазақша</b></span>
@@ -56,7 +49,7 @@
 											<div class="menu_cim"><div class="lazy_menu" data-src="/assets/img/icons/flag-russia_1f1f7-1f1fa.png"></div></div>
 											<span><?=t::w('Language')?>: <b>Русский</b></span>
 										<? endif ?>
-									</div>
+									</div> -->
 								</div>
 
 								<div class="menu_cna dsp_n">
@@ -79,19 +72,15 @@
 											<div class="menu_cim"><i class="fal fa-angle-left"></i></div>
 											<span>Назад</span>
 										</div>
-										<a class="menu_ci" href="/about/">
+										<a class="menu_ci" href="#/about/">
 											<div class="menu_cim"></div>
 											<span>О нас</span>
 										</a>
-										<a class="menu_ci" href="/services/">
-											<div class="menu_cim"></div>
-											<span>Услуги</span>
-										</a>
-										<a class="menu_ci" href="/about/reviews.php">
+										<a class="menu_ci" href="/#review">
 											<div class="menu_cim"></div>
 											<span>Отзывы</span>
 										</a>
-										<a class="menu_ci" href="/about/certificates.php">
+										<a class="menu_ci" href="#/about/certificates.php">
 											<div class="menu_cim"></div>
 											<span>Сертификаты</span>
 										</a>
@@ -101,7 +90,7 @@
 
 							<a class="menu_cn menu_cn2" href="tel:<?=$site['phone']?>">
 								<div class="menu_cim">
-									<div class="lazy_menu" data-src="/assets/img/bag/IMG_4195 s.png"></div>
+									<div class="lazy_menu" data-src="/assets/img/bag/photo_2024-01-11_18-20-26.jpg"></div>
 									<!-- <span class="menu_cim_on"></span> -->
 								</div>
 								<div class="menu_cizt">
@@ -123,7 +112,7 @@
 
 <!-- tabs -->
 <? if ($site_set['menu']): ?>
-	<!-- <div class="tabs_f <?=($site_set['tabs']=='true'?'tabs_acts':'')?>">
+	<!-- <div class="tabs_f <?=(@$site_set['tabs']=='true'?'tabs_acts':'')?>">
 		<div class="tabs">
 			<a href="/" class="tabs_i <?=($menu_name=='home'?'tabs_iact':'')?>"><div class="tabs_img"></div></a>
 			<a href="/catalog.php" class="tabs_i <?=($menu_name=='catalog'?'tabs_iact':'')?>"><i class="far fa-hotel"></i></a>

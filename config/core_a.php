@@ -56,7 +56,7 @@
     // data
     $core = new core;
     $user = core::$user_data;
-    $user_id = $user['id'];
+    $user_id = @$user['id'];
 
 
     // lang

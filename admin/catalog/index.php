@@ -27,7 +27,7 @@
 
 			<? while($cours_d = mysqli_fetch_assoc($cours)): ?>
 				<? $cours_id = $cours_d['id']; ?>
-				<? if ($cours_d['info']) $cours_d = array_merge($cours_d, fun::cours_info($cours_d['id'])); ?>
+				<? if (@$cours_d['info']) $cours_d = array_merge($cours_d, fun::cours_info($cours_d['id'])); ?>
 					<a class="uc_di" href="/admin/item/?id=<?=$cours_id?>">
 						<div class="uc_dit">
 							<div class="bq_ci_info"><div class="bq_cih"><?=$cours_d['name_'.$lang]?></div></div>
