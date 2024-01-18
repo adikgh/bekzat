@@ -66,8 +66,13 @@
 
 				<div class="uitemci_ck">
 					<div class="uitemci_ckt">
-						<div class="uitemci_cktl"><h1 class="uitemci_h"><?=$cours_d['name_'.$lang]?></h1></div>
-						<div class="uitemci_cktr"><div class="lazy_img" data-src="/assets/uploads/sanatorium/<?=$cours_d['img']?>"></div></div>
+						<div class="uitemci_cktl">
+							<h1 class="uitemci_h"><?=$cours_d['name_'.$lang]?></h1>
+							<p class="fr_price"><?=$cours_d['price']?></p>
+						</div>
+						<div class="uitemci_cktr">
+							<div class="lazy_img" data-src="/assets/uploads/sanatorium/<?=$cours_d['img']?>"></div>
+						</div>
 					</div>
 				</div>
 
@@ -148,28 +153,17 @@
 			</div>
 			<div class="pop_bl_cl lazy_c">
 				<div class="form_c">
+
 					<div class="form_im">
 						<div class="form_span">Шипажайтың атауы:</div>
-                  <input type="text" class="form_txt sh_name_ubd" placeholder="Атауын жазыңыз" data-lenght="2" value="<?=$cours_d['name_kz']?>" />
+						<input type="text" class="form_txt sh_name_ubd" placeholder="Атауын жазыңыз" data-lenght="2" value="<?=$cours_d['name_ru']?>" />
 						<i class="fal fa-text form_icon"></i>
-               </div>
-					<div class="form_im">
-						<div class="form_span">Автор:</div>
-						<!-- <i class="fal fa-user-graduate form_icon"></i> -->
-						<input type="text" class="form_txt cours_autor_ubd" placeholder="Авторды жазыңыз" data-lenght="2" value="<?=$cours_d['address']?>" />
 					</div>
-
-					<div class="form_im form_sel">
-						<div class="form_span">Адрес таңдау:</div>
-						<i class="fal fa-warehouse-alt form_icon"></i>
-						<div class="form_im_txt sel_clc sh_adres_ubd" data-val="<?=$cours_d['country_id']?>"><?=fun::country($cours_d['country_id'])['name_kz']?></div>
-						<i class="fal fa-caret-down form_icon_sel"></i>
-						<div class="form_im_sel sel_clc_i">
-							<? $warehouses = db::query("select * from country where parent_id is not null"); ?>
-							<? while ($warehouses_d = mysqli_fetch_assoc($warehouses)): ?>
-								<div class="form_im_seli" data-val="<?=$warehouses_d['id']?>"><?=$warehouses_d['name_kz']?></div>
-							<? endwhile ?>
-						</div>
+					
+					<div class="form_im">
+						<div class="form_span">Бағасы:</div>
+						<i class="fal fa-tenge form_icon"></i>
+						<input type="tel" class="form_im_txt fr_price sh_price_ubd" placeholder="10.000 тг" data-lenght="1" value="<?=$cours_d['price']?>" />
 					</div>
 
 					<div class="form_im">
@@ -184,6 +178,7 @@
 							<span>Сақтау</span>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>

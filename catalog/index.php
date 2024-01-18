@@ -69,7 +69,7 @@
 									<!-- <div class="bl5_iadd"><i class="fas fa-map-marker-alt"></i><?=$ana['address']?></div> -->
 								</div>
 								<div class="bl5_icb" href="/sanatorium/?id=<?=$ana['id']?>">
-									<div class="bl5_icp"><?=@t::w('from1').@fun::p($ana['id'])?> тг. <?=@t::w('from2')?></div>
+									<div class="bl5_icp">от <p class="fr_price"><?=($ana['price']?$ana['price']:@fun::p($ana['id']))?></p></div>
 									<div class="btn btn_dd btn_clm"><i class="fal fa-long-arrow-down"></i></div>
 								</div>
 							</div>

@@ -30,32 +30,47 @@
 
 	</div>
 
+
 	<!--  -->
 	<div class="bl7" id="bl2">
+		<div class="bl7_rzla"></div>
 		<div class="bl_c">
-			<div class="head_c txt_c">
-				<div class="head_v1">
-					<div class="head_vt" ><?=t::w('Our advantages')?></div>
-					<h3><?=t::w('bl7_of2')?></h3>
+			<div class="bl7_rz">
+				<div class="bl7_rzl">
+					<div class="head_c">
+						<div class="head_v1">
+							<h3><?=t::w('bl7_of2')?></h3>
+							<div class="head_vt" >О нас</div>
+						</div>
+					</div>
+					<div class="bl7_c">
+						<div class="bl7_te">«Главная ценность нашей команды – здоровье, то есть санаторий для нас – это не бизнес, а стиль жизни!»</div>
+						
+						<? $sql = db::query("select * from `word_blocks` where type = 'bl7' and lang = '$lang' ORDER BY number ASC"); ?>
+						<? while($ana = mysqli_fetch_array($sql)): ?>
+							<div class="bl7_i" >
+								<i class="far fa-badge-check"></i>
+								<div class="bl7_ic"><?=$ana['txt1']?></div>
+							</div>
+						<? endwhile ?>
+
+					</div>
+					<div class="bl7_b" >
+						<p><?=t::w('bl7_of3')?></p>
+						<a class="btn btn_whatsapp" target="_blank" href="https://wa.me/<?=$site['whatsapp']?>"><i class="fab fa-whatsapp"></i><span><?=t::w('Write')?></span></a>
+					</div>
+				</div>
+				<div class="bl7_rzr">
+					<div class="bl7_rzrc lazy_img" data-src="/assets/img/bag/close-up-doctor-holding-patient.jpg"></div>
 				</div>
 			</div>
-			<div class="bl7_c">
-				<? $sql = db::query("select * from `word_blocks` where type = 'bl7' and lang = '$lang' ORDER BY number ASC"); ?>
-				<? while($ana = mysqli_fetch_array($sql)): ?>
-					<div class="bl7_i" >
-						<div class="bl7_img lazy_bag" data-src="/assets/img/bag/<?=$ana['img']?>"></div>
-						<h6 class="bl7_in"><?=$ana['txt1']?></h6>
-						<p class="bl7_it"><?=$ana['txt2']?></p>
-					</div>
-				<? endwhile ?>
-			</div>
-			<div class="bl7_b" >
-				<p><?=t::w('bl7_of3')?></p>
-				<a class="btn btn_whatsapp" target="_blank" href="https://wa.me/<?=$site['whatsapp']?>"><i class="fab fa-whatsapp"></i><span><?=t::w('Write')?></span></a>
-			</div>
+			
 		</div>
 	</div>
 
+
+
+	
 	<!--  -->
 	<div class="bl5">
 		<div class="bl_c">
@@ -83,7 +98,7 @@
 									<!-- <div class="bl5_iadd"><i class="fas fa-map-marker-alt"></i><?=$ana['address']?></div> -->
 								</div>
 								<div class="bl5_icb" href="/sanatorium/?id=<?=$ana['id']?>">
-									<div class="bl5_icp"><?=@t::w('from1').@fun::p($ana['id'])?> тг. <?=@t::w('from2')?></div>
+									<div class="bl5_icp">от <p class="fr_price"><?=($ana['price']?$ana['price']:@fun::p($ana['id']))?></p></div>
 									<div class="btn btn_dd btn_clm"><i class="fal fa-long-arrow-down"></i></div>
 								</div>
 							</div>
@@ -97,6 +112,56 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+	
+	<!--  -->
+	<div class="bl9">
+		<div class="bl_c">
+			<div class="head_c txt_c">
+				<div class="head_v1">
+					<h4><?=t::w('Guest Reviews')?></h4>
+				</div>
+			</div>
+			<div class="bl9_c">
+				<div class="swiper-container bl9_con">
+					<div class="swiper-wrapper">
+						
+						<? $sql = db::query("select * from `sanatorium_reviews` where arh = 0"); ?>
+						<? while ($ana = mysqli_fetch_array($sql)): ?>
+							<div class="swiper-slide bl9_i" >
+								<div class="bl9_iln">
+									<div class="bl9_iln2">
+										<div class="bl9_ilogo lazy_rev" data-src="/assets/uploads/reviews/<?=$ana['img']?>"></div>
+										<div class="bl9_ilc"><div class="bl9_ilname"><?=$ana['name']?></div><div class="bl9_ils"><?=t::w('source:').$ana['sn']?></div></div>
+									</div>
+									<div class="bl9_ildt">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+								<p class="bl9_it"><?=$ana['txt']?></p>
+							</div>
+						<? endwhile ?>
+						
+					</div>
+				</div>
+				<div class="swiper-button-prev bl9_prev"><div class="btn btn_sqr"><i class="fal fa-chevron-left"></i></div></div>
+				<div class="swiper-button-next bl9_next"><div class="btn btn_sqr"><i class="fal fa-chevron-right"></i></div></div>
+			</div>
+			<div class="bl9_b" >
+				<p><?=t::w('bl9_of3')?></p>
+				<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>"><div class="btn"><?=t::w('Communication')?></div></a>
+			</div>
+		</div>
+	</div>
+
+
 
 	<!--  -->
 	<div class="bl4">
@@ -216,64 +281,7 @@
 		</div>
 	</div>
 
-	<!--  -->
-	<div class="bl13">
-		<div class="bl_c" >
-			<div class="bl131_c">
-				<div class="bl13_l">
-					<div class="head_c">
-						<h3><?=t::w('bl13_1o')?></h3>
-						<p><?=t::w('bl13_1p')?></p>
-					</div>
-					<div class="btn disb_zab2"><span><?=t::w('give')?></span></div>
-				</div>
-				<div class="bl13_r"><div class="bl13_ri lz_bl13" data-src="assets/img/bag/sww122.jpeg"></div></div>
-			</div>
-		</div>
-	</div>
 
-	<!--  -->
-	<div class="bl9">
-		<div class="bl_c">
-			<div class="head_c txt_c">
-				<div class="head_v1">
-					<div class="head_vt" ><?=t::w('Guest Reviews')?></div>
-					<h4><?=t::w('bl9_of2')?></h4>
-				</div>
-			</div>
-			<div class="bl9_c">
-				<div class="swiper-container bl9_con">
-					<div class="swiper-wrapper">
-						<? $sql = db::query("select * from `sanatorium_reviews` where arh = 0"); ?>
-						<? while ($ana = mysqli_fetch_array($sql)): ?>
-							<div class="swiper-slide bl9_i" >
-								<div class="bl9_iln">
-									<div class="bl9_iln2">
-										<div class="bl9_ilogo lazy_rev" data-src="/assets/uploads/reviews/<?=$ana['img']?>"></div>
-										<div class="bl9_ilc"><div class="bl9_ilname"><?=$ana['name']?></div><div class="bl9_ils"><?=t::w('source:').$ana['sn']?></div></div>
-									</div>
-									<div class="bl9_ildt">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-								</div>
-								<p class="bl9_it"><?=$ana['txt']?></p>
-							</div>
-						<? endwhile ?>
-					</div>
-				</div>
-				<div class="swiper-button-prev bl9_prev"><div class="btn btn_sqr"><i class="fal fa-chevron-left"></i></div></div>
-				<div class="swiper-button-next bl9_next"><div class="btn btn_sqr"><i class="fal fa-chevron-right"></i></div></div>
-			</div>
-			<div class="bl9_b" >
-				<p><?=t::w('bl9_of3')?></p>
-				<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>"><div class="btn"><?=t::w('Communication')?></div></a>
-			</div>
-		</div>
-	</div>
 
 	<!--  -->
 	<div class="bl11">

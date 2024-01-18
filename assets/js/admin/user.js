@@ -339,8 +339,7 @@ $(document).ready(function() {
 			data: ({
 				id: $('.btn_cours_edit').data('cours-id'),
 				name: $('.sh_name_ubd').data('val'),
-				adres: $('.cours_autor_ubd').data('val'), 
-				sh_adres: $('.sh_adres_ubd').data('val'),
+				price: $('.sh_price_ubd').data('val'), 
 				img: $('.sh_img_ubd').data('val'),
 			}),
 			success: function(data){
