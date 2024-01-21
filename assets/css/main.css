@@ -840,10 +840,10 @@
 }
 .bl1_offer h1, .bl1_offer2 h1{font-size:50px}
 @media(max-width:500px){.bl1_offer h1{font-size:32px}}
-@media(max-width:428px){.bl1_offer h1{font-size:22px}}
-@media(max-width:414px){.bl1_offer h1{font-size:20px}}
-@media(max-width:390px){.bl1_offer h1{font-size:18px}}
-@media(max-width:320px){.bl1_offer h1{font-size:16px}}
+@media(max-width:428px){.bl1_offer h1{font-size:28px}}
+@media(max-width:414px){.bl1_offer h1{font-size:26px}}
+@media(max-width:390px){.bl1_offer h1{font-size:24px}}
+@media(max-width:320px){.bl1_offer h1{font-size:20px}}
 
 
 /*  */
