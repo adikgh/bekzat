@@ -26,18 +26,13 @@
 			</div>
 
 			<? while($cours_d = mysqli_fetch_assoc($cours)): ?>
-				<? $cours_id = $cours_d['id']; ?>
-				<? if (@$cours_d['info']) $cours_d = array_merge($cours_d, fun::cours_info($cours_d['id'])); ?>
-					<a class="uc_di" href="/admin/item/?id=<?=$cours_id?>">
-						<div class="uc_dit">
-							<div class="bq_ci_info"><div class="bq_cih"><?=$cours_d['name_'.$lang]?></div></div>
-							<div class="bq_ci_img"><div class="lazy_img" data-src="/assets/uploads/sanatorium/<?=$cours_d['img']?>"></div></div>
-						</div>
-						<div class="uc_dib">
-							<div class="uc_dib_ckb"></div>
-							<div class="bq_ci_btn"><div class="btn btn_gr btn_dd"><i class="fal fa-long-arrow-right"></i></div></div>
-						</div>
-					</a>
+				<a class="uc_di" href="/admin/item/?id=<?=$cours_d['id']?>">
+					<div class="bq_ci_img"><div class="lazy_img" data-src="/assets/uploads/sanatorium/<?=$cours_d['img']?>"></div></div>
+					<div class="bq_ci_info">
+						<div class="bq_cih"><?=$cours_d['name_'.$lang]?></div>
+						<p class="fr_price"><?=$cours_d['price']?></p>
+					</div>
+				</a>
 			<? endwhile ?>
 		</div>
 

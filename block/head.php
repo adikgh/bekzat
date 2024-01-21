@@ -1,10 +1,10 @@
 <? $menu = mysqli_fetch_array(db::query("select * from `site_menu` where name = '$menu_name' and type = 'main'")); ?>
-<? if ($menu_name == 'sana') $menu['title'] = t::w('sana').$sana['name'].t::w('sana1'); ?>
+<? if ($menu_name == 'sana') $menu['title_'.$lang] = t::w('sana').$sana['name'].t::w('sana1'); ?>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title><?=$menu['title_'.$lang]?> | <?=$site['name']?></title>
+<title><?=@$menu['title_'.$lang]?> | <?=$site['name']?></title>
 <meta name="description" content="<?=@$menu['disc_'.$lang]?> <?=$site['phone_view']?>">
 <meta name="keywords" content="<?=@$menu['keyw_'.$lang]?>">
 <meta name="theme-color" content="<?=@$site['color']?>">

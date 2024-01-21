@@ -4,7 +4,6 @@
 		<div class="header_c">
 			<div class="header_l">
 				<a class="logo" href="/admin/">
-					<div class="logo_l lazy_img" data-src="/assets/img/logo/logo.png"></div>
 					<div class="logo_r"><?=$site['name']?></div>
 				</a>
 			</div>
@@ -45,25 +44,24 @@
 			</div>
 		</div>
 		<div class="utop">
-			<? if ($site_set['utop_bk']): ?>
+			<? if (@$site_set['utop_bk']): ?>
 				<div class="utop_l">
 					<a class="utop_ic" href="/admin/<?=$site_set['utop_bk']?>"><i class="fal fa-long-arrow-left"></i></a>
 				</div>
 			<? endif ?>
 			<div class="utop_r">
-				<? if ($site_set['utop']): ?>
-					<div class="utop_nm"><?=$site_set['utop']?></div>
+				<? if (@$site_set['utop']): ?>
+					<div class="utop_nm"><?=@$site_set['utop']?></div>
 				<? else: ?>
 					<a class="utop_nm utop_nm2 logo" href="/admin/catalog/">
-						<div class="logo_l lazy_img" data-src="/assets/img/logo/logo_bl.png"></div>
 						<div class="logo_r"><?=$site['name']?></div>
 					</a>
 				<? endif ?>
-				<? if ($site_set['utopu'] != false): ?>
+				<? if (@$site_set['utopu']): ?>
 					<a class="menu" href="/admin/acc/">
 						<div class="menu_bars">
-							<div class="menu_bars_c lazy_img" data-src="/assets/uploads/users/<?=$user['img']?>">
-								<?=($user['img']?'':'<i class="fal fa-user"></i>')?>
+							<div class="menu_bars_c lazy_img" data-src="/assets/uploads/users/<?=$user['logo']?>">
+								<?=($user['logo']?'':'<i class="fal fa-user"></i>')?>
 							</div>
 						</div>
 					</a>

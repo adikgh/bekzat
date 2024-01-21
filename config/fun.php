@@ -103,8 +103,8 @@ class fun {
 
 	public static function txt($id) {
 		if (isset($_SESSION['lang'])) $lang = $_SESSION['lang']; else $lang = 'ru';
-		$sql = mysqli_fetch_array(db::query("select * from `sanatorium_info` where sana_id = '$id' and lang = '$lang'"));
-		return $sql['txt'];
+		$sql = db::query("select * from `sanatorium_info` where sana_id = '$id' and lang = '$lang'");
+		if (mysqli_num_rows($sql)) return mysqli_fetch_array($sql); else return null;
 	}
 
 	public static function rank($n) {

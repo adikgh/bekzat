@@ -183,7 +183,7 @@
 					<div class="sana_bl2 " sana_bl3 id="about">
 						<div class="head_c"><h5 class=""><?=t::w('Info')?></h5></div>
 						<div class="sana_bl_about">
-							<p><?=fun::txt($id)?></p>
+							<p><?=@fun::txt($id)['txt']?></p>
 						</div>
 					</div>
 

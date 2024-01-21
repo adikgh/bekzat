@@ -32,7 +32,7 @@
 	<div class="uitem">
 
 		<div class="uitem_c uitem_c2">
-			<!-- Инфо -->
+			
 			<div class="uitemc_l">
 
 				<div class="uitemc_um">
